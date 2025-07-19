@@ -17,6 +17,7 @@
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
 - [React-Native-MMKV](https://npmjs.com/package/react-native-mmkv)
+- [Tailwind](https://tailwindcss.com)
 
 ---
 
@@ -59,17 +60,8 @@ npm run ios
 
 ## 📷 Screenshots
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="margin-left: 10;">
-        <h2 style="text-align: center;">Home</h2>
-        <img src="./src/assets/images/home-page.jpg"/>
-    </div>
-    <div style="margin-left: 10;">
-        <h2 style="text-align: center;">Add Task</h2>
-        <img src="./src/assets/images/add-task.jpg"/>
-    </div>
-    <div style="margin-left: 10;">
-        <h2 style="text-align: center;">Edit Task</h2>
-        <img src="./src/assets/images/edit-task.jpg"/>
-    </div>
+<div align="center">
+  <img src="./src/assets/images/home-page.jpg" alt="Task List Screenshot" width="300" />
+  <img src="./src/assets/images/add-task.jpg" alt="Add Task Screenshot" width="300" />
+  <img src="./src/assets/images/edit-task.jpg" alt="Add Task Screenshot" width="300" />
 </div>
