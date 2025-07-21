@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import { Filter, Task, TaskProviderState } from "../lib/types";
-// import { storage } from "../lib/storage";
+import { storage } from "../lib/storage";
 
 const initialState: TaskProviderState = {
   tasks: [],
@@ -27,7 +27,7 @@ export function TaskProvider({ children }: { children: ReactNode }) {
   const [currentFilter, setCurrentFilter] = useState<Filter>("All");
 
   function saveTasksToStorage(tasksToSave: Task[]) {
-    // storage.set("tasks", JSON.stringify(tasksToSave));
+    storage.set("tasks", JSON.stringify(tasksToSave));
   }
 
   function toggleComplete(taskId: number) {
@@ -71,13 +71,13 @@ export function TaskProvider({ children }: { children: ReactNode }) {
     });
   }
 
-  // useEffect(() => {
-  //   const savedTasks = storage.getString("tasks");
-  //   if (savedTasks) {
-  //     const data = JSON.parse(savedTasks);
-  //     setTasks(data);
-  //   }
-  // }, [storage]);
+  useEffect(() => {
+    const savedTasks = storage.getString("tasks");
+    if (savedTasks) {
+      const data = JSON.parse(savedTasks);
+      setTasks(data);
+    }
+  }, [storage]);
 
   return (
     <TaskContext.Provider
